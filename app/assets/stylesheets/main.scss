@@ -1,0 +1,30 @@
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  // I just had to put a pic of our dogs in here! My wife Ruth is a photographer, and we worked together to get this
+  // pic of them being patriotic while trying to keep them from eating the wood flag pole :)
+  background-image: url('our_dogs_zeppelin_and_bartok.jpg');
+  background-size: cover;
+}
+
+.content-container {
+  background-color: $content-bg-color;
+  border-radius: $border-radius;
+  padding: 1rem;
+}
+
+.page-footer {
+  background-color: $primary;
+  color: $yiq-text-light;
+  font-size: $font-size-sm / 1.1;
+}
+
+.link-text {
+  color: $link-text-color;
+
+  &:hover {
+    color: $link-text-hover-color;
+  }
+}

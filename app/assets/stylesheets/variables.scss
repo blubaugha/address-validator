@@ -1,0 +1,17 @@
+//
+// Bootstrap overrides
+//
+// Some Vote.org theme colors and fonts
+//
+$primary:                 #205493;
+$danger:                  #cd2026;
+$font-family-sans-serif:  ClearSans, Helvetica, Arial, sans-serif;
+$yiq-text-light:          #f1f1f1;
+$yiq-text-dark:           #323a45;
+
+//
+// Application variables
+//
+$content-bg-color:          rgba(255, 255, 255, .85);
+$link-text-color:           $yiq-text-light;
+$link-text-hover-color:     darken($yiq-text-light, 15%)

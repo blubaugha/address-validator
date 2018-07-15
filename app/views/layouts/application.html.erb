@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>AddressValidator</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>AddressValidator</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body class="d-flex flex-column">
+<header class="text-center sticky-top bg-primary text-light pt-2 pr-4 pb-2 pl-4 mb-4 border-bottom">
+  <h1>Vote.org</h1>
+  <div>Address Validator</div>
+</header>
+<main class="container flex-grow-1">
+  <%= yield %>
+</main>
+<footer class="page-footer mt-4 pt-2 pb-2 text-center">
+  © 2018. Vote.org is a 501(c)(3) registered non-profit organization and does not support or oppose any political
+  candidate or party.
+  <a class="link-text" href="https://smartystreets.com" title="Look up and validate street addresses">
+    Address verification</a> by SmartyStreets
+</footer>
+</body>
 </html>

@@ -1,25 +1,53 @@
-<%= form_tag '/addresses', method: :post do %>
-    <div>
-      <%= label_tag :street_address %>
-      <%= text_field_tag :street_address%>
-    </div>
+<div class="row justify-content-md-center">
+  <div class="col-md-5">
+    <div class="content-container">
+      <% if @address && @address.errors[:not_exist].first %>
+        <div class="alert alert-danger" role="alert">
+          <%= @address.errors[:not_exist].first %>
+        </div>
+      <% end %>
+      <% if @address && @address.valid? %>
+        <div class="alert alert-success" role="alert">
+          Successfully added '<%= @address %>'!
+        </div>
+      <% end %>
+      <%= form_tag "/addresses", class: "needs-validation", novalidate: "novalidate", role: 'form', method: :post do %>
+        <div class="form-group">
+          <%= label_tag :street_address %>
+          <%= text_field_tag :street_address, "", class: "form-control", required: true %>
+          <div class="invalid-feedback">
+            Street is required
+          </div>
+        </div>
 
-    <div>
-      <%= label_tag :city %>
-      <%= text_field_tag :city%>
-    </div>
+        <div class="form-group">
+          <%= label_tag :city %>
+          <%= text_field_tag :city, "", class: "form-control", required: true %>
+          <div class="invalid-feedback">
+            City is required
+          </div>
+        </div>
 
-    <div>
-      <%= label_tag :state %>
-      <%= text_field_tag :state%>
-    </div>
+        <div class="form-group">
+          <%= label_tag :state %>
+          <%= text_field_tag :state, "", class: "form-control", required: true %>
+          <div class="invalid-feedback">
+            State is required
+          </div>
+        </div>
 
-    <div>
-      <%= label_tag :zip_code %>
-      <%= text_field_tag :zip_code%>
-    </div>
+        <div class="form-group">
+          <%= label_tag :zip_code %>
+          <%= text_field_tag :zip_code, "", class: "form-control", required: true, pattern: "[0-9]{5}" %>
+          <div class="invalid-feedback">
+            A 5-digit zip code is required
+          </div>
+        </div>
 
-    <div class = "buttons">
-      <%= submit_tag 'Validate Address' %>
+        <div class="buttons">
+          <%= submit_tag "Validate Address", class: "btn btn-primary" %>
+        </div>
+      <% end %>
     </div>
-<% end %>
+  </div>
+</div>
