@@ -104,7 +104,7 @@ When submitting the project please answer the following questions:
  - Add user first/last name and email to send status emails and any necessary future correspondence
  - Allow the user to optionally create an account so they can come back and update their address easily if they move
  - Add a secondary address validation service to use for fault tolerance in case the primary validation service is down
- - Better exception handling and retry logic for the address validation API calls (things like bad requests, too much data sent, too many requets in short period of time, etc.)
+ - Better exception handling and retry logic for the address validation API calls (things like bad requests, too much data sent, too many requests in a short period of time, etc.)
  4. If you were to take this project to production, what would be on your list of things to do?
 - Minify the CSS and scripts
  - Encrypt API keys in config files/environment variables
