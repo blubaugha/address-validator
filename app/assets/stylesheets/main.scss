@@ -5,7 +5,7 @@ html, body {
 body {
   // I just had to put a pic of our dogs in here! My wife Ruth is a photographer, and we worked together to get this
   // pic of them being patriotic while trying to keep them from eating the wood flag pole :)
-  background-image: url('our_dogs_zeppelin_and_bartok.jpg');
+  background-image: url(<%= asset_path 'our_dogs_zeppelin_and_bartok.jpg' %>);
   background-size: cover;
 }
 
