@@ -64,4 +64,3 @@ gem 'bootstrap', '~> 4.1.1' # Some styles
 gem 'jquery-rails' # Client-side form validation
 gem 'smartystreets_ruby_sdk' # Address validation and standardization
 gem 'webmock' # Stubbing HTTP requests
-gem 'wdm', '>= 0.1.0' # To avoid polling for changes on Windows
